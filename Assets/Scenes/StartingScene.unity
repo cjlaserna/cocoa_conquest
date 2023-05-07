@@ -7202,6 +7202,7 @@ GameObject:
   - component: {fileID: 1019780918}
   - component: {fileID: 1019780923}
   - component: {fileID: 1019780924}
+  - component: {fileID: 1019780925}
   m_Layer: 0
   m_Name: BambooEnemy
   m_TagString: enemy
@@ -7364,6 +7365,7 @@ MonoBehaviour:
   groundLyr:
     serializedVersion: 2
     m_Bits: 64
+  turnFromPlayerOnEncounter: 1
 --- !u!70 &1019780924
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -7380,6 +7382,18 @@ CapsuleCollider2D:
   m_Offset: {x: -0.008840915, y: 0.040672667}
   m_Size: {x: 1.21248, y: 0.8182663}
   m_Direction: 1
+--- !u!114 &1019780925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019780917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ff99559586c8124294a760c865d5c28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1057791311
 GameObject:
   m_ObjectHideFlags: 0

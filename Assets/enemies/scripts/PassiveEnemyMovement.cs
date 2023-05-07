@@ -7,6 +7,7 @@ public class PassiveEnemyMovement : MonoBehaviour
     [SerializeField] private float moveSpeedY = 0f;
     [SerializeField] private List<string> tagsToAvoid = new List<string>();
     [SerializeField] private LayerMask groundLyr;
+    [SerializeField] private bool turnFromPlayerOnEncounter = true;
 
     private Rigidbody2D rb;
     private CapsuleCollider2D coll;
@@ -35,6 +36,8 @@ public class PassiveEnemyMovement : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // if game object tag is player do below
+        if (!turnFromPlayerOnEncounter) return;
         if (tagsToAvoid.Contains(collision.gameObject.tag)) transform.localScale = new Vector2(-(Mathf.Sign(rb.velocity.x)), transform.localScale.y);
     }
 }
